@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-
         stage('Deploy Website') {
             steps {
                 sh '''
@@ -10,7 +9,7 @@ pipeline {
                 rm -rf /var/www/html/*
 
                 echo "Copying new website files..."
-                cp -r /mnt/c/Users/dhara/Documents/moodcake/* /var/www/html/
+                cp -r ./* /var/www/html/
                 '''
             }
         }
