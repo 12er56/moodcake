@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff5f7;
+  text-align: center;
+}
+
+header {
+  background: #ff9aa2;
+  padding: 20px;
+  color: #fff;
+}
+
+.mood-section {
+  padding: 40px;
+}
+
+.moods button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #ffb7c5;
+}
+
+.moods button:hover {
+  background: #ff6f91;
+  color: white;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background: #ff9aa2;
+  color: white;
+}
