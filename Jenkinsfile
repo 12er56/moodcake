@@ -2,15 +2,19 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout SCM') {
+            steps {
+                // Git repo checkout
+                checkout scm
+            }
+        }
+
         stage('Deploy Website') {
             steps {
-                sh '''
-                echo "Cleaning old files..."
-                rm -rf /var/www/html/*
-
-                echo "Copying new website files..."
-                cp -r ./* /var/www/html/
-                '''
+                echo 'Cleaning old files...'
+                sh 'rm -rf ~/website/*'          // old files delete
+                echo 'Copying new files...'
+                sh 'cp -r * ~/website/'          // new files copy
             }
         }
     }
